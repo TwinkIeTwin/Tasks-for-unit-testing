@@ -1,15 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.168
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task1", "Task1\Task1.csproj", "{FB8E3B46-59DF-4CA4-B6DB-1FB1EE8DDFDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task1", "Task1\Task1.csproj", "{FB8E3B46-59DF-4CA4-B6DB-1FB1EE8DDFDD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task1.Tests", "Task1.Tests\Task1.Tests.csproj", "{16B5BB99-27B0-41D9-9D23-6F56F0D7EC9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task1.Tests", "Task1.Tests\Task1.Tests.csproj", "{16B5BB99-27B0-41D9-9D23-6F56F0D7EC9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task2", "Task2\Task2.csproj", "{9E02E367-B10B-4EBD-8064-EF1F052E9657}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task2", "Task2\Task2.csproj", "{9E02E367-B10B-4EBD-8064-EF1F052E9657}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task2.Tests", "Task2.Tests\Task2.Tests.csproj", "{22FCAB9C-90DE-46E6-A571-CEFCEB8C5506}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task2.Tests", "Task2.Tests\Task2.Tests.csproj", "{22FCAB9C-90DE-46E6-A571-CEFCEB8C5506}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1737A547-0309-4DE4-8DFD-C2578CCDD1E6}"
+	ProjectSection(SolutionItems) = preProject
+		..\code-analysis.ruleset = ..\code-analysis.ruleset
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
