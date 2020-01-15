@@ -2,8 +2,28 @@
 
 namespace Task2
 {
+    /// <summary>
+    /// class for getting extension methods for int.
+    /// </summary>
     public static class IntegerExtensions
     {
+        /// <summary>
+        /// Greatest common divisor of two input numbers.
+        /// </summary>
+        /// <param name="a"> first number. </param>
+        /// <param name="b"> second number. </param>
+        /// <returns>Greatest coomon divisor. </returns>
+        /// <example>
+        /// <code>
+        /// int c = IntegerExtensions.GetGcd(4, 5);
+        /// if (c > 1)
+        /// {
+        ///     Console.WriteLine(c);
+        /// }
+        /// </code>
+        /// </example>
+        /// <exception cref="System.ArgumentException">Thrown when two parametres are 0 at the same time.
+        /// </exception>
         public static int GetGcd(int a, int b)
         {
             if (a == 0 && b == 0)

@@ -4,5 +4,29 @@
         <name>Task2</name>
     </assembly>
     <members>
+        <member name="T:Task2.IntegerExtensions">
+            <summary>
+            class for getting extension methods for int.
+            </summary>
+        </member>
+        <member name="M:Task2.IntegerExtensions.GetGcd(System.Int32,System.Int32)">
+            <summary>
+            Greatest common divisor of two input numbers.
+            </summary>
+            <param name="a"> first number. </param>
+            <param name="b"> second number. </param>
+            <returns>Greatest coomon divisor. </returns>
+            <example>
+            <code>
+            int c = IntegerExtensions.GetGcd(4, 5);
+            if (c > 1)
+            {
+                Console.WriteLine(c);
+            }
+            </code>
+            </example>
+            <exception cref="T:System.ArgumentException">Thrown when two parametres are 0 at the same time.
+            </exception>
+        </member>
     </members>
 </doc>
