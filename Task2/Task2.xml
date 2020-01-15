@@ -25,7 +25,7 @@
             }
             </code>
             </example>
-            <exception cref="T:System.ArgumentException">Thrown when two parametres are 0 at the same time.
+            <exception cref="T:System.ArgumentException">Thrown when two parametres are 0 at the same time or one is 0 and another one is System.Int32.MinValue.
             </exception>
         </member>
     </members>

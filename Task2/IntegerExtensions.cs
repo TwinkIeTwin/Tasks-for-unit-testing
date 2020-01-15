@@ -22,7 +22,7 @@ namespace Task2
         /// }
         /// </code>
         /// </example>
-        /// <exception cref="System.ArgumentException">Thrown when two parametres are 0 at the same time.
+        /// <exception cref="System.ArgumentException">Thrown when two parametres are 0 at the same time or one is 0 and another one is System.Int32.MinValue.
         /// </exception>
         public static int GetGcd(int a, int b)
         {
@@ -30,48 +30,48 @@ namespace Task2
             {
                 throw new ArgumentException("Two numbers cannot be 0 at the same time.");
             }
-            else if (a == 0)
+
+            if (a == 0)
             {
-                return Math.Abs(b);
+                return b != int.MinValue ? Math.Abs(b) :
+                    throw new ArgumentException("can not return result because Abs(int.MinValue) is out of type int range", nameof(b));
             }
-            else if (b == 0)
+
+            if (b == 0)
             {
-                return Math.Abs(a);
+                return a != int.MinValue ? Math.Abs(a) :
+                    throw new ArgumentException("can not return result because Abs(int.MinValue) is out of type int range", nameof(a));
+            }
+
+            uint absA = (uint)Math.Abs((long)a);
+            uint absB = (uint)Math.Abs((long)b);
+            uint dividend, devider;
+            if (absA > absB)
+            {
+                dividend = absA;
+                devider = absB;
             }
             else
             {
-                // use long because of potential overflow when a or b is max negative int
-                long absA = Math.Abs((long)a);
-                long absB = Math.Abs((long)b);
-                long k1, k2;
-                if (absA > absB)
-                {
-                    k1 = absA;
-                    k2 = absB;
-                }
-                else
-                {
-                    k1 = absB;
-                    k2 = absA;
-                }
-
-                long remainder;
-
-                // euclidean algorithm
-                while (true)
-                {
-                    remainder = k1 - ((k1 / k2) * k2);
-                    if (remainder == 0)
-                    {
-                        break;
-                    }
-
-                    k1 = k2;
-                    k2 = remainder;
-                }
-
-                return (int)k2;
+                dividend = absB;
+                devider = absA;
             }
+
+            uint remainder;
+
+            while (true)
+            {
+                remainder = dividend - ((dividend / devider) * devider);
+                if (remainder == 0)
+                {
+                    break;
+                }
+
+                dividend = devider;
+                devider = remainder;
+            }
+
+            return (int)devider;
         }
     }
 }
